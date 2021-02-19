@@ -1,0 +1,9 @@
+.list_page {
+    flex: 5;
+    border-right: 2px solid white;
+    background: white;
+}
+.chat_area {
+    flex: 7;
+    position: relative;
+}

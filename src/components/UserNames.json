@@ -1,0 +1,72 @@
+[
+    {
+        "name" : "User1",
+        "messages" : [
+            {
+                "mess" : "hi i m user1",
+                "time" : "3.21 AM",
+                "sent" : false
+            },
+            {
+                "mess" : "how are you",
+                "time" : "3.54 AM",
+                "sent" : false
+            }, 
+            {
+                "mess" : "why are you not replying?",
+                "time" : "3.54 AM",
+                "sent" : false
+            }
+        ]
+    },
+    {
+        "name" : "User2",
+        "messages" : [
+            {
+                "mess" : "hi i m user2",
+                "time" : "11.30 AM",
+                "sent" : false
+            },
+            {
+                "mess" : "where are you from",
+                "time" : "1.00 PM",
+                "sent" : false
+            }
+        ]
+    },
+    {
+        "name" : "User3",
+        "messages" : [
+            {
+                "mess" : "Hiee. Do I know you?",
+                "time" : "9:00 PM",
+                "sent" : false
+            }
+        ]
+    },
+    {
+        "name" : "User4",
+        "messages" : [
+            {
+                "mess" : "heyyaa",
+                "time" : "8.00 AM",
+                "sent" : false
+            },
+            {
+                "mess" : "Do you use Snapchat?",
+                "time" : "9.28 AM",
+                "sent" : false
+            }, 
+            {
+                "mess" : "Can I have your number please?",
+                "time" : "10.39 AM",
+                "sent" : false
+            },
+            {
+                "mess" : "Why are you not replying",
+                "time" : "4.56 PM",
+                "sent" : false
+            }
+        ]
+    }
+]

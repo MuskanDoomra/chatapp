@@ -1,23 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react"
+
+import './App.css'
+
+import List from "./pages/List"
+
+import ChatArea from "./pages/ChatArea"
+
+import {BrowserRouter as Router,Route,Switch} from "react-router-dom"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main_page">
+      <Router>
+        <List/>
+        <Switch>
+
+          <Route path="/" exact>
+            <ChatArea user="User1" />
+          </Route>
+
+          <Route path="/user2" exact>
+            <ChatArea user="User2" />
+          </Route>
+
+          <Route path="/user3" exact>
+            <ChatArea user="User3" />
+          </Route>
+
+          <Route path="/user4" exact>
+            <ChatArea user="User4" />
+          </Route>
+
+        </Switch>
+      </Router>
     </div>
   );
 }

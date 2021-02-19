@@ -1,0 +1,47 @@
+.header {
+    background: #075E54;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    height: 60px;
+}
+
+.user_list {
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+}
+
+.user_card {
+    display: flex;
+    padding: 10px;
+}
+
+.user_card:hover {
+    cursor: pointer;
+    background: rgb(184, 182, 182);
+    color: white;
+}
+
+.user_card:focus {
+    background: blue;
+    color: white;
+    border: none;
+    outline: none;
+}
+
+.user_img {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+    background: white;
+}
+
+.user_name {
+    margin: 10px 20px;
+}
