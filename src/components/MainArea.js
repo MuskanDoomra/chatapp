@@ -1,4 +1,4 @@
-import React , {useState} from 'react'
+import React , {useEffect, useState} from 'react'
 
 import "./chat_area.css"
 
@@ -6,38 +6,41 @@ import chats from "./UserNames.json"
 
 function MainArea(props) {
 
+    
     var date = new Date()
     var hrs = date.getHours() > 12 ? date.getHours() - 12 : date.getHours();
-    hrs = (hrs === 0)? 12 :hrs;
+    hrs = (hrs === 0) ? 12 : hrs;
     var am_pm = date.getHours() >= 12 ? "PM" : "AM";
     var min = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
     var time = hrs + ":" + min + " " + am_pm
-
+    
     var user = props.user
-
+    
     var user_name = chats.filter((data) => {
         if(data.name.includes(user)) {
             return data
         }
     })
+    
+    const[messages,setMessages] = useState(user_name[0].messages);
+
+    useEffect(() => {
+        setMessages(user_name[0].messages)
+    },[props.user])
 
     const[val,setValue] = useState("");
 
-    // const[messages,setMessages] = useState(user_name[0].messages);
-
-    const messages = user_name[0].messages;
-
-    // console.log(messages,user_name[0].messages)
+    // const messages = user_name[0].messages;
 
     function onHandleKey(event) {
-        if(event.keyCode===13 && val!= "") {
+        if(event.keyCode===13 && val !== "") {
             messages.push({"mess": val , "time": time , "sent": true});
             setValue("");
         }
     }
 
     function onSubmit(event) {
-        if(val!="") {
+        if(val !== "") {
             messages.push({"mess": val , "time": time , "sent": true});
             setValue("");
         }
@@ -49,12 +52,12 @@ function MainArea(props) {
             <div className="chat_section">
                 {messages.map((data,key) =>
                     <div key={key}>
-                        {data.sent===false && 
+                        {data.sent === false && 
                             <p className="msg_content">{data.mess}
                                 <span className="msg_time adjust">{data.time}</span>
                             </p>
                         }
-                        {data.sent===true &&
+                        {data.sent === true &&
                             <p className="msg_sent">{data.mess}
                                 <span className="msg_time">{data.time}</span>
                                 <span className="checkmark_one"></span>
@@ -104,7 +107,7 @@ function MainArea(props) {
                         alt="mic_icon"
                         className="mic_img"
                     />}
-                    {val!="" && <img 
+                    {val !== "" && <img 
                         src="./send_btn.png" 
                         alt="send_icon"
                         className="send_img"

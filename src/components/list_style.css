@@ -3,7 +3,9 @@
     color: white;
     text-align: center;
     font-size: 30px;
-    height: 60px;
+    height: 55px;
+    padding-top: 5px;
+    box-shadow: 0 10px 10px -10px #000000;
 }
 
 .user_list {
@@ -43,5 +45,5 @@
 }
 
 .user_name {
-    margin: 10px 20px;
+    margin: 18px 20px 0 20px;
 }
